@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 cap = cv2.VideoCapture(0)     
 # Instead of the Camera sindex we can specify the audio file like 'test.avi, nad theta gets played frame by frame.
 
-#fourcc = cv2.VideoWriter_fourcc(*'XVID') 
+##############fourcc = cv2.VideoWriter_fourcc(*'XVID') 
 # Here XVID is most suitable, MJPG gic=ves high size videos. X264 give low size videos.
 
-#out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
+#############out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
 # Here the 20 is the snumber sof frames per second. The tuple is the Frame size we want tod record.
 
 while(True):
@@ -21,7 +21,7 @@ while(True):
     cv2.imshow('Video',frame)
     #Display the frame
     cv2.imshow('Gray',gray)
-    #out.write(frame)
+    ###################out.write(frame)
     key = cv2.waitKey(1)
     # Waits for 1ms to read the dinput of a key, and stores the UNICODE value in the variable key
 
@@ -29,5 +29,5 @@ while(True):
         break               # Breaks from the Loop if the enterd keyd is q
 
 cap.release()
-#out.release()
+##########out.release()
 cv2.destroyAllWindows()
